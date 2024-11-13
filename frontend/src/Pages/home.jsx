@@ -1,28 +1,25 @@
 import React, { useState } from 'react'
-import TextPoppins from '../assets/polices/TextPoppins'
-import TextField from '../components/form/TextField'
+import HeroSection from '../components/home page/HeroSection'
+import { Podcast } from '../components/home page/Podcast'
+import Events from '../components/home page/Events'
+import Blog from '../components/home page/SceanceTutorat'
+import Subby from '../components/home page/Subby'
+import DiscussionForum from '../components/home page/DiscussionForum'
+import Testimonial from '../components/home page/Testimonial'
+import Partenaire from '../components/home page/Partenaire'
 
 function Home() {
-  const [email, setEmail] = useState('');
   return (
     <div>
-      <TextPoppins color="text-blue-500" fontSize="text-xl" fontWeight="font-bold">
-        Ceci est un texte avec Poppins !
-      </TextPoppins>
-
-      <TextField
-        id="email"
-        label="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="Entrez votre email"
-        color="text-gray-700"
-        fontSize="text-lg"
-        fontWeight="font-medium"
-        required
-      />
-
-    </div>
+      <HeroSection />
+      <Podcast />
+      <Events />
+      <Blog />
+      <Subby />
+      <DiscussionForum />
+      <Testimonial />
+      <Partenaire />
+    </div >
   )
 }
 
